@@ -1,7 +1,27 @@
 {
   "name": "semtest",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "author": "eggp <eggprojec@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eggp/semtest.git"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.2.0"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/github"
+    ],
+    "prepare": [
+    ],
+    "publish": [
+      "@semantic-release/github"
+    ]
+  }
 }
